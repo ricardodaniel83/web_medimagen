@@ -1,9 +1,17 @@
 angular
     .module('app',
     [
+      'ngSanitize',
       'ngRoute',
       'ui.router'
     ])
+    .run(function($rootScope){
+      $rootScope.dominio ='http://localhost';
+      $rootScope.api ='/medimagenes/api/';
+      $rootScope.imagenes = '/medimagenes/sites/default/files/'
+      $rootScope.url = $rootScope.dominio + $rootScope.api;
+      $rootScope.urlImg = $rootScope.dominio + $rootScope.imagenes;
+    })
     .config(function($stateProvider, $urlRouterProvider){
 
       $urlRouterProvider.otherwise("/home");
@@ -25,6 +33,8 @@ angular
              views:{
                 "main":{
                    templateUrl: "app/home/home.html",
+                   controller: "homeCtrl",
+                   controllerAs:"home"
                 },
              }
 
