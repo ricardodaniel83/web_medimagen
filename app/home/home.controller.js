@@ -4,12 +4,12 @@ angular
 
   homeCtrl.$inject =['$rootScope','dataService'];
 
-  function homeCtrl($rootScope, dataService ){
+  function homeCtrl($rootScope, dataService){
       var home = this;
       home.listServiceFather = [];
       home.ContentPage = {};
       home.urlImg = $rootScope.urlImg +"servicios_padre/";
-      home.searchService = searchService;
+
       init();
       function init(){
           getServiceFather();
@@ -31,8 +31,6 @@ angular
 
       }
 
-      function searchService(item){
 
-      }
 
   }

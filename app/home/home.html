@@ -17,7 +17,7 @@
 			 	<img ng-src="{{home.urlImg + item.field_icono.und[0].filename}}" class="img-responsive">
 			 	<h1 class="titulo-seccion">{{item.title}}</h1>
 			 	<p class="texto-seccion" ng-bind-html="item.field_contenido.und[0].value"></p>
-			 	<a class="link-seccion" ng-click="home.searchService(item)">
+			 	<a class="link-seccion" ui-sref="servicios({id:item.nid})">
 			 		<img src="images/boton_neutrón.png">
 			 	</a>
 	 </div>

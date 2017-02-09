@@ -1,0 +1,61 @@
+<img src="/webmedimagen/images/nuestros medicos_1.png" class="img-responsive" width="100%">
+<div class="titulo-imagen">
+		<h1>Servicios</h1>
+		<p>Profesionales especializados, al servicios de nuestros pacientes</p>
+</div>
+<div class="container" style="background-color: #fff">
+	 <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2" ng-repeat="item in servicios.listServiceFather ">
+			 	<img ng-src="{{servicios.urlImg + item.field_icono.und[0].filename}}" class="img-responsive">
+			 	<h1 class="titulo-seccion">{{item.title}}</h1>
+			 	<p class="texto-seccion" ng-bind-html="item.field_contenido.und[0].value"></p>
+			 	<a class="link-seccion" ui-sref="servicios({id:item.nid})">
+			 		<img src="images/boton_neutrón.png">
+			 	</a>
+	 </div>
+</div>
+<div class="container-fluid" style="background-color: #01505F; padding:0px">
+
+
+    <div class="panel">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{servicios.listFather.title}}</h3>
+      </div>
+      <div class="panel-body">
+            <div class="col-sm-2 col-md-2">
+                <ul>
+                  <li ng-repeat="item  in servicios.listChildren"><a href="#">{{item.title}}</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-7 col-md-7">
+
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <form >
+                    <h2>Agendar Cita</h2>
+
+                    <div class="form-group">
+                      <input type="text" class="form-control"  placeholder="Input field" >
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control"  placeholder="Input field" >
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control"  placeholder="Input field" >
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control"  placeholder="Input field" >
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control"  placeholder="Input field" >
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control"  placeholder="Input field" >
+                    </div>
+
+                    <button type="button" class="btn btn-primary" ng-click="servicos.envia()">Enviar</button>
+                </form>
+
+            </div>
+      </div>
+    </div>
+</div>

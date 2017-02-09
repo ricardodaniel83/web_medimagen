@@ -40,4 +40,40 @@ angular
 
          })
 
+         .state('nosotros', {
+             url: "/nosotros",
+             views:{
+                "main":{
+                   templateUrl: "app/nosotros/nosotros.html",
+                   controller: "nosotrosCtrl",
+                   controllerAs:"nosotros"
+                },
+             }
+
+         })
+
+         .state('medicos', {
+             url: "/medicos",
+             views:{
+                "main":{
+                   templateUrl: "app/medicos/medicos.html",
+                   controller: "medicosCtrl",
+                   controllerAs:"medicos"
+                },
+             }
+
+         })
+
+         .state('servicios', {
+             url: "/servicios/:id",
+             views:{
+                "main":{
+                   templateUrl: "app/servicios/servicios.html",
+                   controller: "serviciosCtrl",
+                   controllerAs:"servicios"
+                },
+             }
+
+         })
+
     });

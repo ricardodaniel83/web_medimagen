@@ -32,7 +32,7 @@ angular
       function getListServiceChildren(idFather){
           var defered = $q.defer();
           var promise = defered.promise;
-          $http.post($rootScope.url+'paginas/'+ nid +'/serviceChildren',
+          $http.post($rootScope.url+'paginas/'+ idFather +'/serviceChildren',
                     { runa:'123'},
                     {headers: {'Content-Type': 'application/json'}
                 })
