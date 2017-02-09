@@ -6,17 +6,17 @@
 <div class="container-fluid parallax-formulario">
 	<div class="container">
 		<section class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div class="padding-60-0" ng-bind-html="home.ContentPage.field_contenido_multiple.und[0].value"></div>
+			<div class="padding-60-0 panel-medico-home"  ng-bind-html="home.ContentPage.field_contenido_multiple.und[0].value"></div>
 		</section>
 	</div>
 </div>
 
-<div class="container" style="background-color: #fff">
+<div class="container-fluid  padding-60-50" style="background-color: #fff">
 
-	 <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2" ng-repeat="item in home.listServiceFather ">
+	 <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 " ng-repeat="item in home.listServiceFather ">
 			 	<img ng-src="{{home.urlImg + item.field_icono.und[0].filename}}" class="img-responsive">
-			 	<h1 class="titulo-seccion">{{item.title}}</h1>
-			 	<p class="texto-seccion" ng-bind-html="item.field_contenido.und[0].value"></p>
+			 	<h1 class="titulo-seccion font-size-20">{{item.title}}</h1>
+			 	<p class="texto-seccion " ng-bind-html="item.field_contenido.und[0].value"></p>
 			 	<a class="link-seccion" ui-sref="servicios({id:item.nid})">
 			 		<img src="images/boton_neutrón.png">
 			 	</a>
