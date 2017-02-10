@@ -11,6 +11,16 @@ angular
       servicios.paramas = $stateParams;
       servicios.listServiceFather =[];
       servicios.urlImg = $rootScope.urlImg +"servicios_padre/";
+      servicios.formulario ={
+          servicio:'',
+          nombre:'',
+          apellido:'',
+          telefono:'',
+          email:'',
+          fecha:'',
+      };
+      servicios.loadPestana = loadPestana;
+      servicios.enviar = enviar;
 
       init();
 
@@ -33,7 +43,7 @@ angular
             servicios.listFather = result;
             dataService.getPestanaColeccion(nid).then(function(result){
                 servicios.listFather.pestanas = result;
-                console.log("Padre:",servicios.listFather);
+                servicios.formulario.servicio =  servicios.listFather.title;
             });
         });
       }
@@ -56,8 +66,46 @@ angular
       function getServiceFather(){
           dataService.getListServiceFather().then(function(result){
                 servicios.listServiceFather = result;
-                console.log("Servicios:",servicios.listServiceFather);
+
           });
+      }
+
+      function loadPestana(item){
+          console.log(item);
+          servicios.listFather.pestanas = item.pestanas
+      }
+
+      function enviar(){
+        console.log(servicios.formulario);
+         if(validarFormulario()){
+           dataService.sendContact(servicios.formulario,"Agenda").then(function(result){
+              console.log(result);
+           });
+         }
+      }
+
+      function validarFormulario(){
+        var mensaje = "";
+        if(servicios.formulario.servicio == ''){
+          mensaje +="<li>No selecciono el servicio</li>";
+        }
+        if(servicios.formulario.nombre == ''){
+          mensaje +="<li>No ingreso su Nombre y Apellido</li>";
+        }
+
+        if(servicios.formulario.email == ''){
+          mensaje +="<li>No ingreso su correo electronico</li>";
+        }
+        if(servicios.formulario.telefono == ''){
+          mensaje +="<li>No ingreso su teléfono de contacto</li>";
+        }
+        if(mensaje.length >0){
+          bootbox.alert("No se a podido enviar el formulario  por :<ul style='margin-left:20px;'>"+mensaje+"</ul>")
+          return false;
+        }else{
+          return true;
+        }
+
       }
 
 

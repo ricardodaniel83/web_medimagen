@@ -73,9 +73,9 @@ angular
          return promise;
       }
 
-      function sendContact(datos, tipo){
+      function sendContact(datos, nombre){
         return $http.post($rootScope.url+'paginas/1/'+'formularios',
-                      {tipo: tipo, data: datos, runa:'123'},
+                      {tipo: nombre, data: datos, runa:'123'},
                       {headers: {'Content-Type': 'application/json'}
                     })
                     .then(function(response){

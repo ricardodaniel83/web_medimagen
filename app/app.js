@@ -1,9 +1,11 @@
 angular
     .module('app',
     [
+      'ngAnimate',
       'ngSanitize',
       'ngRoute',
-      'ui.router'
+      'ui.router',
+      'ui.bootstrap',
     ])
     .run(function($rootScope){
       $rootScope.dominio ='';

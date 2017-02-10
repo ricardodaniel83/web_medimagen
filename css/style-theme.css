@@ -10,7 +10,6 @@ body{
 }
 p{
   font-family: "HelveticaNeueThn", Arial;
-  
   text-align: justify;
 }
 
@@ -66,12 +65,12 @@ input{
 
 .padding-60-0{
 	padding: 20px 0px;
-	
+
 
 }
 .padding-60-50{
 	padding: 50px 80px;
-	
+
 
 }
 
@@ -213,4 +212,77 @@ color: #fff !important;
 }
 .titulo-imagen p{
 	font-size: 25px;
+}
+
+.panel-servicios{
+    //color: #fff
+}
+.panel-servicios .panel-heading{
+    background: #fff;
+}
+
+.panel-servicios .panel-heading h3{
+    padding: 30px 0px;
+    color: #2095F3;
+    font-size: 60px;
+}
+.panel-servicios .panel-heading img{
+  margin: 0 10px;
+  position: relative;
+  top: -25px;
+}
+
+.panel-servicios .panel-body{
+  clear: left;
+}
+.panel-servicios .panel-body h2{
+    background: #2095F3;
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+}
+
+
+.panel-servicios .panel-body ul li{
+   color: #fff;
+   list-style-type: disc;
+   margin: 10px 0px;
+}
+.panel-servicios .panel-body ul li a{
+    color: #fff;
+    font-size: 20px;
+}
+
+.panel-servicios .panel-body .tab_servicios{
+  background-color: #1A626F;
+}
+
+.panel-servicios .panel-body .tab_servicios li{
+  margin-top: 0px;
+}
+.panel-servicios .panel-body .tab_servicios li.tab_header a {
+    background: #fff;
+}
+.panel-servicios .panel-body .tab_servicios li.active{
+    background: #2095F3;
+}
+.panel-servicios .panel-body .tab_servicios li.tab_header a{
+  color:#2095F3;
+  font-weight: bold;
+}
+.panel-servicios .panel-body .tab_servicios li.active a{
+    color:#fff;
+    background: #2095F3;
+    border-color: #2095F3;
+}
+.panel-servicios .panel-body .tab_servicios .tab_contenido{
+  font-size: 22px;
+  color: #fff;
+  text-align: justify;
+  padding: 5px 10px;
+}
+.nav-tabs {
+  border-bottom: 1px solid #1A626F;
 }
