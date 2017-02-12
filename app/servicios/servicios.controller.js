@@ -2,20 +2,22 @@ angular
   .module('app')
   .controller('serviciosCtrl',serviciosCtrl);
 
-  serviciosCtrl.$inject =['$rootScope','dataService','$stateParams'];
+  serviciosCtrl.$inject =['$rootScope','dataService','$stateParams','$scope'];
 
-  function serviciosCtrl($rootScope, dataService, $stateParams){
+  function serviciosCtrl($rootScope, dataService, $stateParams, $scope){
       var servicios = this;
       servicios.listChildren = [];
       servicios.listFather = {};
       servicios.paramas = $stateParams;
       servicios.listServiceFather =[];
       servicios.urlImg = $rootScope.urlImg +"servicios_padre/";
+      servicios.urlGalery = $rootScope.urlImg + "servicios/";
       servicios.myInterval = 3000;
       servicios.noWrapSlides = false;
       servicios.active = 0;
       servicios.urlSlider =   $rootScope.urlImg +"slider/";
       servicios.slides =[];
+      servicios.galery=[];
       servicios.formulario ={
           servicio:'',
           nombre:'',
@@ -24,6 +26,49 @@ angular
           email:'',
           fecha:'',
       };
+      servicios.numberLoaded = false;
+      servicios.slickConfig = {
+            enabled: true,
+            autoplay: true,
+            draggable: false,
+            autoplaySpeed: 3000,
+            slidesToShow: 4,
+            slidesToScroll:4,
+            method: {},
+
+            event: {
+                beforeChange: function (event, slick, currentSlide, nextSlide) {
+                },
+                afterChange: function (event, slick, currentSlide, nextSlide) {
+                }
+            },
+            responsive: [
+                       {
+                         breakpoint: 1024,
+                         settings: {
+                           slidesToShow: 3,
+                           slidesToScroll: 3,
+                           infinite: true,
+                           dots: true
+                         }
+                       },
+                       {
+                         breakpoint: 600,
+                         settings: {
+                           slidesToShow: 2,
+                           slidesToScroll: 2
+                         }
+                       },
+                       {
+                         breakpoint: 480,
+                         settings: {
+                           slidesToShow: 1,
+                           slidesToScroll: 1
+                         }
+                       }
+                ]
+
+        };
       servicios.loadPestana = loadPestana;
       servicios.enviar = enviar;
 
@@ -47,6 +92,8 @@ angular
       function getContentPage(nid){
         dataService.getNode(nid).then(function(result){
             servicios.listFather = result;
+            servicios.galery = result.field_galeria.und;
+            servicios.numberLoaded = true;
             dataService.getPestanaColeccion(nid).then(function(result){
                 servicios.listFather.pestanas = result;
                 servicios.formulario.servicio =  servicios.listFather.title;
@@ -120,6 +167,7 @@ angular
 
         });
       }
+
 
 
 

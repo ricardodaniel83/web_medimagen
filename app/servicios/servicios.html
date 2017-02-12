@@ -78,3 +78,9 @@
       </div>
     </div>
 </div>
+
+<div class="container-fluid" style="background:#01515F; padding:0px">
+	<slick class="slider" settings="servicios.slickConfig " ng-if="servicios.numberLoaded" dots="true">
+				<img ng-src="{{servicios.urlGalery  + slide.filename}}" ng-repeat="slide in servicios.galery">
+	</slick>
+</div>

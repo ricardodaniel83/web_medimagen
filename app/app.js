@@ -3,6 +3,7 @@ angular
     [
       'ngAnimate',
       'ngSanitize',
+      'slickCarousel',
       'ngRoute',
       'ui.router',
       'ui.bootstrap',
