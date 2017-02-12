@@ -36,7 +36,7 @@ input{
 }
 .parallax-formulario{
 	background: url('../images/imagen_home_paralax.png') no-repeat ;
-	background-size: 100%;
+	background-size: 100% 100%;
 	background-attachment: fixed;
 	padding: 70px 0px 70px 0px;
 }
@@ -199,12 +199,11 @@ color: #fff !important;
 
 /******* Titulo de la iMagen  **********/
 .titulo-imagen{
-	 position: absolute;
-	 top:50%;
-	 margin-left: 20%;
 	 color:#fff;
-	 border-left: 3px solid #fff;
+	 //border-left: 3px solid #fff;
 	 padding-left: 20px;
+   top:35%;
+   left: 30% !important;
 }
 
 .titulo-imagen h1{
@@ -309,6 +308,9 @@ footer{
     padding-bottom: 5px;
     text-transform: uppercase;
     width: 100%;
+}
+.recent-post-foot ul{
+   clear: left;
 }
 .recent-post-foot li a {
     color: #bcbec0;

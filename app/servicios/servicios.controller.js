@@ -11,6 +11,11 @@ angular
       servicios.paramas = $stateParams;
       servicios.listServiceFather =[];
       servicios.urlImg = $rootScope.urlImg +"servicios_padre/";
+      servicios.myInterval = 3000;
+      servicios.noWrapSlides = false;
+      servicios.active = 0;
+      servicios.urlSlider =   $rootScope.urlImg +"slider/";
+      servicios.slides =[];
       servicios.formulario ={
           servicio:'',
           nombre:'',
@@ -28,6 +33,7 @@ angular
           getServiceFather();
           getContentPage(servicios.paramas.id);
           searchChildren(servicios.paramas.id);
+          getSlider(8);
       }
 
       function searchChildren(idFather){
@@ -107,6 +113,14 @@ angular
         }
 
       }
+
+      function getSlider(nid){
+        dataService.getNode(nid).then(function(result){
+            servicios.slides = result.field_galeria.und;
+
+        });
+      }
+
 
 
 

@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.6.1"
+    "angular": "^1.6.1",
+    "angular-slick": "0.0.0",
+    "slick-carousel": "^1.6.0"
   }
 }

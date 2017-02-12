@@ -1,8 +1,17 @@
-<img src="/webmedimagen/images/imagen_home_galeria.png" class="img-responsive" width="100%">
-<div class="titulo-imagen">
-		<h1 style="font-size:160px">ÉTICA</h1>
-		<p>Acciones fundamentadas en principios de justicia y autonomia</p>
-</div>
+<!-- Slider de imagenes -->
+	<div style="overflow: hidden; height: 100%">
+			<div uib-carousel active="home.active" interval="home.myInterval" no-wrap="home.noWrapSlides">
+				<div uib-slide ng-repeat="slide in home.slides" index="$index">
+					<img ng-src="{{home.urlSlider + slide.filename}}" style="width:100%">
+					<div class="carousel-caption titulo-imagen">
+						<h1 style="font-size:160px">{{slide.title}}</h1>
+						<p>{{slide.alt}}</p>
+					</div>
+				</div>
+			</div>
+	</div>
+
+<!-- Texto principal -->
 <div class="container-fluid parallax-formulario">
 	<div class="container">
 		<section class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -10,7 +19,7 @@
 		</section>
 	</div>
 </div>
-
+<!-- listado de servicios -->
 <div class="container-fluid  padding-60-50" style="background-color: #fff">
 
 	 <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 " ng-repeat="item in home.listServiceFather ">
