@@ -78,7 +78,7 @@ angular
           getServiceFather();
           getContentPage(servicios.paramas.id);
           searchChildren(servicios.paramas.id);
-          getSlider(8);
+          getSlider(38);
       }
 
       function searchChildren(idFather){

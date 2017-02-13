@@ -32,7 +32,7 @@ angular
       init();
 
       function init(){
-          getSlider(8);
+          getSlider(38);
           getDatosFormulario();
       }
 

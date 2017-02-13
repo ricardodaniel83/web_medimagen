@@ -9,7 +9,7 @@ angular
       'ui.bootstrap',
     ])
     .run(function($rootScope){
-      $rootScope.dominio ='http://localhost';
+      $rootScope.dominio ='';
       $rootScope.api ='/medimagenes/api/';
       $rootScope.imagenes = '/medimagenes/sites/default/files/'
       $rootScope.url = $rootScope.dominio + $rootScope.api;

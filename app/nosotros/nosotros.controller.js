@@ -2,9 +2,9 @@ angular
   .module('app')
   .controller('nosotrosCtrl',nosotrosCtrl);
 
-  nosotrosCtrl.$inject =['$rootScope','dataService'];
+  nosotrosCtrl.$inject =['$rootScope','dataService','$scope'];
 
-  function nosotrosCtrl($rootScope, dataService){
+  function nosotrosCtrl($rootScope, dataService,$scope){
       var nosotros = this;
       nosotros.contentPage = [];
       nosotros.getSlider =[];
@@ -13,11 +13,11 @@ angular
       nosotros.active = 0;
       nosotros.urlSlider =   $rootScope.urlImg +"slider/";
       nosotros.slides =[];
-      
+
       init();
       function init(){
           getContentPage(6);
-          getSlider(8)
+          getSlider(39)
       }
 
       function getContentPage(nid){
