@@ -1,8 +1,17 @@
-<img src="/webmedimagen/images/nuestros medicos_1.png" class="img-responsive" width="100%">
-<div class="titulo-imagen">
-		<h1>Servicios</h1>
-		<p>Profesionales especializados, al servicios de nuestros pacientes</p>
+<!-- Slider -->
+<div style="overflow: hidden; height: 100%">
+		<div uib-carousel active="servicios.active" interval="servicios.myInterval" no-wrap="servicios.noWrapSlides">
+			<div uib-slide ng-repeat="slide in servicios.slides" index="$index">
+				<img ng-src="{{servicios.urlSlider + slide.filename}}" style="width:100%">
+				<div class="carousel-caption titulo-imagen">
+					<h1 style="font-size:160px">{{slide.title}}</h1>
+					<p>{{slide.alt}}</p>
+				</div>
+			</div>
+		</div>
 </div>
+
+<!-- Contenido -->
 <div class="container" style="background-color: #fff">
 	<br>
 	 <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2" ng-repeat="item in servicios.listServiceFather ">
@@ -68,4 +77,10 @@
             </div>
       </div>
     </div>
+</div>
+
+<div class="container-fluid" style="background:#01515F; padding:0px">
+	<slick class="slider" settings="servicios.slickConfig " ng-if="servicios.numberLoaded" dots="true">
+				<img ng-src="{{servicios.urlGalery  + slide.filename}}" ng-repeat="slide in servicios.galery">
+	</slick>
 </div>

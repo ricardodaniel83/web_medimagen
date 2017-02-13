@@ -1,0 +1,74 @@
+<!-- Slider de imagenes -->
+	<div style="overflow: hidden; height: 100%">
+			<div uib-carousel active="incidencias.active" interval="incidencias.myInterval" no-wrap="incidencias.noWrapSlides">
+				<div uib-slide ng-repeat="slide in incidencias.slides" index="$index">
+					<img ng-src="{{incidencias.urlSlider + slide.filename}}" style="width:100%">
+					<div class="carousel-caption titulo-imagen">
+						<h1 style="font-size:160px">{{slide.title}}</h1>
+						<p>{{slide.alt}}</p>
+					</div>
+				</div>
+			</div>
+	</div>
+
+
+  <!-- Texto principal -->
+<div class="container-fluid">
+  	<div class="container">
+			<div class="col-md-8">
+				<h1>Formulario de Incidencia</h1>
+				<form class="form-horizontal">
+							<div class="form-group">
+								<label class="col-md-2 control-label">Nombre: </label>
+								<div class="col-md-10 control-label">
+										<input type="text" class="form-control" ng-model="incidencias.formulario.nombre">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">Email: </label>
+								<div class="col-md-10 control-label">
+										<input type="text" class="form-control" ng-model="incidencias.formulario.email">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">Departamento: </label>
+								<div class="col-md-10 control-label">
+										<select class="form-control" ng-model="incidencias.departamento" ng-options="option.name for option in incidencias.listDepartamentos track by option.id">	</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">Asunto: </label>
+								<div class="col-md-10 control-label">
+										<select class="form-control" ng-model="incidencias.asunto" ng-options="option.name for option in incidencias.listAsuntos track by option.id">	</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">Urgencia: </label>
+								<div class="col-md-10 control-label">
+										<select class="form-control" ng-model="incidencias.urgencia" ng-options="option.name for option in incidencias.listUrgencia track by option.id">	</select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-md-12 control-label">
+										<textarea class="form-control" rows="8" cols="80" ng-model="incidencias.formulario.mensaje"></textarea>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-md-12">
+									<label class="btn btn-info btn-lg">
+											Adjuntar archivo <input type="file" style="display: none;">
+									</label>
+								</div>
+							</div>
+							<button type="button" class="btn btn-primary btn-lg btn-block" ng-click="incidencias.enviar()">Enviar</button>
+							<br>
+				</form>
+			</div>
+
+			<div class="col-md-4">
+
+			</div>
+    </div>
+</div>

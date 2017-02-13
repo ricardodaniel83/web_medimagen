@@ -3,12 +3,13 @@ angular
     [
       'ngAnimate',
       'ngSanitize',
+      'slickCarousel',
       'ngRoute',
       'ui.router',
       'ui.bootstrap',
     ])
     .run(function($rootScope){
-      $rootScope.dominio ='';
+      $rootScope.dominio ='http://localhost';
       $rootScope.api ='/medimagenes/api/';
       $rootScope.imagenes = '/medimagenes/sites/default/files/'
       $rootScope.url = $rootScope.dominio + $rootScope.api;
@@ -73,6 +74,18 @@ angular
                    templateUrl: "app/servicios/servicios.html",
                    controller: "serviciosCtrl",
                    controllerAs:"servicios"
+                },
+             }
+
+         })
+
+         .state('incidencias', {
+             url: "/incidencias",
+             views:{
+                "main":{
+                   templateUrl: "app/incidencia/incidencias.html",
+                   controller: "incidenciasCtrl",
+                   controllerAs:"incidencias"
                 },
              }
 

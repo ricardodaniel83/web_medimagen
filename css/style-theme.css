@@ -36,7 +36,7 @@ input{
 }
 .parallax-formulario{
 	background: url('../images/imagen_home_paralax.png') no-repeat ;
-	background-size: 100%;
+	background-size: 100% 100%;
 	background-attachment: fixed;
 	padding: 70px 0px 70px 0px;
 }
@@ -199,12 +199,11 @@ color: #fff !important;
 
 /******* Titulo de la iMagen  **********/
 .titulo-imagen{
-	 position: absolute;
-	 top:50%;
-	 margin-left: 20%;
 	 color:#fff;
-	 border-left: 3px solid #fff;
+	 //border-left: 3px solid #fff;
 	 padding-left: 20px;
+   top:35%;
+   left: 30% !important;
 }
 
 .titulo-imagen h1{
@@ -285,4 +284,63 @@ color: #fff !important;
 }
 .nav-tabs {
   border-bottom: 1px solid #1A626F;
+}
+
+footer{
+  background: #363839;
+  color:#bcbec0;
+  padding: 20px 0px;
+}
+
+.foot-address div {
+    color: #bcbec0;
+    line-height: 1.5em;
+    padding-bottom: 12px;
+    font-size: 15px;
+}
+
+.foot-widget-title {
+    color: #e6e7e8;
+    float: left;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 2.3em;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.recent-post-foot ul{
+   clear: left;
+}
+.recent-post-foot li a {
+    color: #bcbec0;
+    line-height: 1.5em;
+    text-decoration: none;
+    transition: all 0.5s ease 0s;
+    font-size: 15px;
+}
+.event-date {
+    color: #107fc9;
+    font-size: 11px;
+    font-size: 13px;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
 }
