@@ -79,4 +79,16 @@ angular
 
          })
 
+         .state('incidencias', {
+             url: "/incidencias",
+             views:{
+                "main":{
+                   templateUrl: "app/incidencia/incidencias.html",
+                   controller: "incidenciasCtrl",
+                   controllerAs:"incidencias"
+                },
+             }
+
+         })
+
     });
