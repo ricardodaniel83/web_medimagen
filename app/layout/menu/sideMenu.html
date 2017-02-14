@@ -1,20 +1,18 @@
 <!-- Dibujamos el menu principal  -->
-<div class="menu-principal" style="position: absolute; z-index:1">
-  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-md-offset-1 col-lg-offset-1">
-   
-  </div>
-  <div class="col-xs-12 col-sm-9 col-md-6 col-lg-6 col-md-offset-2 col-lg-offset-2">
+<div class="menu-principal" style="position: absolute; z-index:1; width:100%">
+
+  <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6 col-md-offset-6 col-lg-offset-6 col-sm-offset-4 col-xs-offset-4">
     <ul class="nav navbar-nav menu-principal">
-      <li> <a href="#" title="" style="padding-top: 120px"><strong>Inicio</strong></a> </li>
+      <li> <a href="#" title="" class="padding-top"><strong>Inicio</strong></a> </li>
       <li class="dropdown">
-        <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="padding-top: 120px"><strong>Quienses Somos </strong> <span class="caret"></span></a>
+        <a  class="dropdown-toggle padding-top" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ><strong>Quienses Somos </strong> <span class="caret"></span></a>
         <ul class="dropdown-menu">
                 <li><a ui-sref="nosotros">Nosotros</a></li>
                 <li><a ui-sref="medicos">Nuestros Medicos</a></li>
               </ul>
       </li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="padding-top: 120px">Servicios <span class="caret"></span></a>
+        <a href="#" class="dropdown-toggle padding-top" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Servicios <span class="caret"></span></a>
         <ul class="dropdown-menu">
                 <li><a ui-sref="servicios({id:3})">Resonancia Magnética</a></li>
                 <li><a ui-sref="servicios({id:8})">Tomografía Axial</a></li>
@@ -25,7 +23,7 @@
 
               </ul>
       </li>
-      <li> <a href="#" title="" style="padding-top: 120px">Contactenos</a> </li>
+      <li> <a href="#" class="padding-top">Contactenos</a> </li>
 
     </ul>
   </div>

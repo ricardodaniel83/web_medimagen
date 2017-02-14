@@ -94,6 +94,10 @@ input{
 	color: #fff;
 }
 
+.menu-principal .padding-top{
+   padding-top: 120px;
+}
+
 .titulo-seccion{
 	font-size: 20px;
 	color: #2395F6;
@@ -194,7 +198,7 @@ color: #fff !important;
 
 .container-fondo{
 		background: url('../images/paralax_nuestros_doctores.png') no-repeat;
-		background-size: 100%
+		background-size: 100% 100%;
 }
 
 /******* Titulo de la iMagen  **********/
@@ -343,4 +347,59 @@ footer{
     background: white;
     cursor: inherit;
     display: block;
+}
+
+.titulo-imagen h1{
+  font-size: 160px;
+}
+
+@media screen and (max-width: 768px) and (min-width: 10px) {
+  .menu-principal ul.dropdown-menu li{
+    background: #fff;
+  }
+  .menu-principal .padding-top{
+     padding-top: 0px;
+  }
+
+  .panel-medico-home{
+    font-size: 14px;
+  }
+
+  ul.menu-contacto-datos{
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .texto-seccion{
+    height: auto;
+  }
+  .panel-medicos .panel-heading h1{
+      font-size: 30px;
+      padding: 10px 20px;
+  }
+
+  .panel-medicos .panel-body p{
+    font-size: 15px;
+    padding-right: 10px;
+  }
+
+  .panel-medicos .panel-body h2{
+    font-size: 24px;
+  }
+
+  .titulo-imagen{
+  	 color:#fff;
+  	 padding-left: 0px;
+     top:10%;
+     left: 5% !important;
+  }
+
+  .titulo-imagen h1{
+  		font-size: 60px;
+  }
+  .titulo-imagen p{
+  	font-size: 15px;
+  }
+
+  .
 }

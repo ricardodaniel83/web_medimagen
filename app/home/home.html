@@ -4,7 +4,7 @@
 				<div uib-slide ng-repeat="slide in home.slides" index="$index">
 					<img ng-src="{{home.urlSlider + slide.filename}}" style="width:100%">
 					<div class="carousel-caption titulo-imagen">
-						<h1 style="font-size:160px">{{slide.title}}</h1>
+						<h1>{{slide.title}}</h1>
 						<p>{{slide.alt}}</p>
 					</div>
 				</div>
@@ -20,10 +20,10 @@
 	</div>
 </div>
 <!-- listado de servicios -->
-<div class="container-fluid  padding-60-50" style="background-color: #fff">
+<div class="container-fluid" style="background-color: #fff">
 
-	 <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 " ng-repeat="item in home.listServiceFather ">
-			 	<img ng-src="{{home.urlImg + item.field_icono.und[0].filename}}" class="img-responsive">
+	 <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 " ng-repeat="item in home.listServiceFather" >
+			 	<img ng-src="{{home.urlImg + item.field_icono.und[0].filename}}" class="img-responsive" style="margin: auto;">
 			 	<h1 class="titulo-seccion font-size-20">{{item.title}}</h1>
 			 	<p class="texto-seccion " ng-bind-html="item.field_contenido.und[0].value"></p>
 			 	<a class="link-seccion" ui-sref="servicios({id:item.nid})">

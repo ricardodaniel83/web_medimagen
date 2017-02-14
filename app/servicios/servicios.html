@@ -4,7 +4,7 @@
 			<div uib-slide ng-repeat="slide in servicios.slides" index="$index">
 				<img ng-src="{{servicios.urlSlider + slide.filename}}" style="width:100%">
 				<div class="carousel-caption titulo-imagen">
-					<h1 style="font-size:160px">{{slide.title}}</h1>
+					<h1>{{slide.title}}</h1>
 					<p>{{slide.alt}}</p>
 				</div>
 			</div>
@@ -12,10 +12,10 @@
 </div>
 
 <!-- Contenido -->
-<div class="container-fluid  padding-60-50" style="background-color: #fff">
+<div class="container-fluid" style="background-color: #fff">
 	<br>
 	 <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2" ng-repeat="item in servicios.listServiceFather ">
-			 	<img ng-src="{{servicios.urlImg + item.field_icono.und[0].filename}}" class="img-responsive">
+			 	<img ng-src="{{servicios.urlImg + item.field_icono.und[0].filename}}" class="img-responsive" style="margin: auto;">
 			 	<h1 class="titulo-seccion">{{item.title}}</h1>
 			 	<p class="texto-seccion" ng-bind-html="item.field_contenido.und[0].value"></p>
 			 	<a class="link-seccion" ui-sref="servicios({id:item.nid})">
@@ -40,7 +40,7 @@
                 </ul>
             </div>
             <div class="col-sm-7 col-md-7" >
-							<uib-tabset active="active" class="tab_servicios">
+							<uib-tabset active="servicios.active" class="tab_servicios">
 									<uib-tab index="$index" heading="{{tab.field_titulo_value}}" class="tab_header" ng-repeat="tab in servicios.listFather.pestanas">
 										 <div class="tab_contenido" ng-bind-html="tab.field_descripcion_value">
 
