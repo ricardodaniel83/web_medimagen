@@ -20,7 +20,7 @@ angular
       function init(){
           getServiceFather();
           getContentPage(1);
-          getSlider(8);
+          getSlider(38);
       }
 
       function getServiceFather(){

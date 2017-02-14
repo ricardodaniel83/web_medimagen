@@ -78,7 +78,7 @@ angular
           getServiceFather();
           getContentPage(servicios.paramas.id);
           searchChildren(servicios.paramas.id);
-          getSlider(8);
+          getSlider(38);
       }
 
       function searchChildren(idFather){
@@ -132,7 +132,7 @@ angular
         console.log(servicios.formulario);
          if(validarFormulario()){
            dataService.sendContact(servicios.formulario,"Agenda").then(function(result){
-              console.log(result);
+              bootbox.alert("Su formulario a sido enviado con exito");
            });
          }
       }
