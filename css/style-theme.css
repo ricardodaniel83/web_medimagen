@@ -49,6 +49,16 @@ input{
 	border-color: #fff;
 	border-radius: 0px;
 }
+select.input-formulario option{
+  color: #015A68;
+}
+form label {
+  color: #fff;
+  font-family: "HelveticaNeueThn", Arial;
+}
+.title-form{
+   color: #fff;
+}
 .menu-contacto-datos li{
 	list-style: none;
 }

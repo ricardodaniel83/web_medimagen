@@ -93,10 +93,11 @@ angular
         dataService.getNode(nid).then(function(result){
             servicios.listFather = result;
             servicios.galery = result.field_galeria.und;
-            servicios.numberLoaded = true;
+
             dataService.getPestanaColeccion(nid).then(function(result){
                 servicios.listFather.pestanas = result;
                 servicios.formulario.servicio =  servicios.listFather.title;
+                servicios.numberLoaded = true;
             });
         });
       }
