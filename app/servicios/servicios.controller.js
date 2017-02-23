@@ -15,6 +15,7 @@ angular
       servicios.myInterval = 3000;
       servicios.noWrapSlides = false;
       servicios.active = 0;
+      servicios.active_pestana = 0;
       servicios.urlSlider =   $rootScope.urlImg +"slider/";
       servicios.slides =[];
       servicios.galery=[];
@@ -97,7 +98,9 @@ angular
             dataService.getPestanaColeccion(nid).then(function(result){
                 servicios.listFather.pestanas = result;
                 servicios.formulario.servicio =  servicios.listFather.title;
-                servicios.numberLoaded = true;
+                setTimeout(function(){
+                  servicios.numberLoaded = true;
+                },1000);
             });
         });
       }
@@ -125,8 +128,11 @@ angular
       }
 
       function loadPestana(item){
-          console.log(item);
-          servicios.listFather.pestanas = item.pestanas
+        servicios.active_pestana  = 1;
+        servicios.listFather.pestanas = item.pestanas;
+        setTimeout(function(){
+          servicios.active_pestana = 0;
+        },1);
       }
 
       function enviar(){
@@ -165,6 +171,7 @@ angular
       function getSlider(nid){
         dataService.getNode(nid).then(function(result){
             servicios.slides = result.field_galeria.und;
+
 
         });
       }
