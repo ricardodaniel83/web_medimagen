@@ -179,9 +179,8 @@ color: #fff !important;
 }
 
 .panel-medicos .panel-heading {
-	background-color: #055463;
-	//border-color:#055463 !important;
-	background: url('../images/nosotros_ejemplo_membrete.png') no-repeat  !important
+	background: url('../images/neutron_membrete.png') no-repeat  left bottom #055463 !important
+
 }
 .panel-medicos .panel-heading h1{
 	  font-size: 50px;
