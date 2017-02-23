@@ -23,7 +23,14 @@
 
               </ul>
       </li>
-      <li> <a href="#" class="padding-top">Contactenos</a> </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle padding-top" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Empresa <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+                <li><a href="http://181.39.1.78:8080/dcm4chee-web3/" target="_blank">Sistema Medico</a></li>
+                <li><a  ui-sref="incidencias">Incidencias</a></li>
+              </ul>
+      </li>
+      <li> <a href="#" ng-click="sideMenu.goContacto()" class="padding-top">Contactenos</a> </li>
 
     </ul>
   </div>

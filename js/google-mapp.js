@@ -33,7 +33,7 @@ function initialize() {
     var marker = new google.maps.Marker({
                         position: myLatLng,
                           map: map,
-                          label: 'Medimagen'
+                          label: 'Medimágenes'
                     });
 }
 
