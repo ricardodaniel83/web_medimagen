@@ -4,23 +4,17 @@ angular
 
     function sideMenu(){
 
-      function sideMenuCtrl(){
+      /*function sideMenuCtrl(){
           var sideMenu = this;
-          sideMenu.goContacto = goContacto
+          sideMenu.goService(id){
 
-          function goContacto(){
-             console.log("Ir al formualrio");
-             var enlace ="#formContactenos";
-             $('html, body').animate({
-		             scrollTop: $(enlace).offset().top
-		          }, 1000);
           }
-      }
+      }*/
 
       return {
                 bindToController: true,
-                controller: sideMenuCtrl,
-                controllerAs: 'sideMenu',
+                //controller: sideMenuCtrl,
+                //controllerAs: 'sideMenu',
                 restrict: 'AE',
                 templateUrl: 'app/layout/menu/sideMenu.html'
             }

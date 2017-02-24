@@ -210,6 +210,12 @@ color: #fff !important;
 		background-size: 100% 100%;
 }
 
+.fondo-menu{
+    background: url('../images/franja_menu.png') no-repeat;
+    background-size: 100% 100%;
+    font-size: 25px;
+}
+
 /******* Titulo de la iMagen  **********/
 .titulo-imagen{
 	 color:#fff;

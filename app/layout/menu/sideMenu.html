@@ -1,20 +1,20 @@
 <!-- Dibujamos el menu principal  -->
-<div class="menu-principal" style="position: absolute; z-index:1; width:100%">
+<div class="menu-principal " style="position: absolute; z-index:1; width:100%; padding-top: 40px; ">
 
-  <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6 col-md-offset-6 col-lg-offset-6 col-sm-offset-4 col-xs-offset-4">
-    <ul class="nav navbar-nav menu-principal">
+  <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6 col-md-offset-6 col-lg-offset-6 col-sm-offset-4 col-xs-offset-4 fondo-menu ">
+    <ul class="nav navbar-nav menu-principal ">
       <li> <a href="#" title="" class="padding-top"><strong>Inicio</strong></a> </li>
       <li class="dropdown">
         <a  class="dropdown-toggle padding-top" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ><strong>Quienses Somos </strong> <span class="caret"></span></a>
         <ul class="dropdown-menu">
                 <li><a ui-sref="nosotros">Nosotros</a></li>
                 <li><a ui-sref="medicos">Nuestros Medicos</a></li>
-              </ul>
+      </ul>
       </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle padding-top" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Servicios <span class="caret"></span></a>
         <ul class="dropdown-menu">
-                <li ><a ui-sref="servicios({id:3})">Resonancia Magnética</a></li>
+                <li><a ui-sref="servicios({id:3})">Resonancia Magnética</a></li>
                 <li><a ui-sref="servicios({id:8})">Tomografía Axial</a></li>
                 <li><a ui-sref="servicios({id:11})">Ecografía 3D-4D</a></li>
                 <li><a ui-sref="servicios({id:12})">Rayos X Digital</a></li>
@@ -23,14 +23,7 @@
 
               </ul>
       </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle padding-top" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Empresa <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-                <li><a href="http://181.39.1.78:8080/dcm4chee-web3/" target="_blank">Sistema Medico</a></li>
-                <li><a  ui-sref="incidencias">Incidencias</a></li>
-              </ul>
-      </li>
-      <li class="active"> <a href="#" ng-click="sideMenu.goContacto()" class="padding-top">Contactenos</a> </li>
+      <li> <a href="#" class="padding-top">Contactenos</a> </li>
 
     </ul>
   </div>
