@@ -90,7 +90,9 @@ form label {
 .font-size-20{
 	font-size: 20px;
 }
-
+.menu-principal{
+   display: block;
+}
 .menu-principal li a{
 	color: #fff;
 }
@@ -213,7 +215,7 @@ color: #fff !important;
 .fondo-menu{
     background: url('../images/franja_menu.png') no-repeat;
     background-size: 100% 100%;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 /******* Titulo de la iMagen  **********/
@@ -368,7 +370,30 @@ footer{
   font-size: 160px;
 }
 
+.menu-resp-principal{
+   background: #055463;
+   border-color: #055463;
+   display: none;
+}
+
+.menu-resp-principal ul.navbar-nav a{
+   color: #fff;
+}
+
+.menu-resp-principal ul.navbar-nav a:hover{
+   color: #00afce;
+}
+
+
 @media screen and (max-width: 768px) and (min-width: 10px) {
+
+  .menu-resp-principal{
+    display: block;
+  }
+
+  .menu-principal{
+     display: none;
+  }
   .menu-principal ul.dropdown-menu li{
     background: #fff;
   }

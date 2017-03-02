@@ -4,19 +4,25 @@ angular
 
     function sideMenu(){
 
-      /*function sideMenuCtrl(){
+      function sideMenuCtrl(){
           var sideMenu = this;
-          sideMenu.goService(id){
+          sideMenu.goContacto = goContacto
 
+          function goContacto(){
+             console.log("Ir al formualrio");
+             var enlace ="#formContactenos";
+             $('html, body').animate({
+		             scrollTop: $(enlace).offset().top
+		          }, 1000);
           }
-      }*/
+      }
 
       return {
-                bindToController: true,
-                //controller: sideMenuCtrl,
-                //controllerAs: 'sideMenu',
-                restrict: 'AE',
-                templateUrl: 'app/layout/menu/sideMenu.html'
+              bindToController: true,
+              controller: sideMenuCtrl,
+              controllerAs: 'sideMenu',
+              restrict: 'AE',
+              templateUrl: 'app/layout/menu/sideMenu.html'
             }
 
     }
