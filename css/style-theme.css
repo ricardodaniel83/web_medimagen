@@ -384,6 +384,24 @@ footer{
    color: #00afce;
 }
 
+.boton-mail{
+  color:#fff;
+  font-size:40px;
+  padding:5px 20px;
+  border-bottom: 2px solid #fff;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-radius: 0px 20px 20px 0px;
+  display:block;
+  background-color: #055463;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.boton-mail:hover{
+  color:#00d0f4;
+}
+
 
 @media screen and (max-width: 768px) and (min-width: 10px) {
 
