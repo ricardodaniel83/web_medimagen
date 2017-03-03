@@ -6,14 +6,15 @@ angular
 
   function homeCtrl($rootScope, dataService, $scope){
       var home = this;
-      home.listServiceFather = [];
-      home.ContentPage = {};
+      home.listServiceFather;
+      home.ContentPage;
       home.urlImg = $rootScope.urlImg +"servicios_padre/";
       home.myInterval = 3000;
       home.noWrapSlides = false;
       home.active = 0;
       home.urlSlider =   $rootScope.urlImg +"slider/";
-      home.slides =[];
+      home.slides;
+
 
 
       init();

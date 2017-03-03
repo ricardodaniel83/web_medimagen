@@ -129,6 +129,7 @@ form label {
 	margin-bottom: 10px;
 }
 
+
 .image-servicios{
 	width: 100%;
 	height: 200px;
@@ -401,7 +402,25 @@ footer{
 .boton-mail:hover{
   color:#00d0f4;
 }
+.precarga{
+   position: absolute;
+   z-index: 1;
+   width: 100%;
+   height: 100%;
+   background: #000;
+   color: #fff;
+   opacity: 0.8;
+   filter:  alpha(opacity=80);
+}
+.box-icono{
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 
+}
 
 @media screen and (max-width: 768px) and (min-width: 10px) {
 

@@ -6,10 +6,10 @@ angular
 
   function serviciosCtrl($rootScope, dataService, $stateParams, $scope){
       var servicios = this;
-      servicios.listChildren = [];
-      servicios.listFather = {};
+      servicios.listChildren;
+      servicios.listFather;
       servicios.paramas = $stateParams;
-      servicios.listServiceFather =[];
+      servicios.listServiceFather;
       servicios.urlImg = $rootScope.urlImg +"servicios_padre/";
       servicios.urlGalery = $rootScope.urlImg + "servicios/";
       servicios.myInterval = 3000;
@@ -17,8 +17,8 @@ angular
       servicios.active = 0;
       servicios.active_pestana = 0;
       servicios.urlSlider =   $rootScope.urlImg +"slider/";
-      servicios.slides =[];
-      servicios.galery=[];
+      servicios.slides;
+      servicios.galery;
       servicios.formulario ={
           servicio:'',
           nombre:'',

@@ -10,7 +10,7 @@ angular
       incidencias.noWrapSlides = false;
       incidencias.active = 0;
       incidencias.urlSlider =   $rootScope.urlImg +"slider/";
-      incidencias.slides =[];
+      incidencias.slides;
       incidencias.listDepartamentos=[];
       incidencias.listAsuntos = [];
       incidencias.listUrgencia =[];

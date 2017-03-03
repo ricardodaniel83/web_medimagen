@@ -1,3 +1,10 @@
+<!-- Precarga -->
+<div class="precarga" ng-hide="home.slides && home.ContentPage && home.listServiceFather">
+		<div class="box-icono">
+				<i class="fa fa-refresh fa-spin fa-5px" style="font-size:45px;"></i>
+		</div>
+</div>
+
 <!-- Slider de imagenes -->
 	<div style="overflow: hidden; height: 100%">
 			<div uib-carousel active="home.active" interval="home.myInterval" no-wrap="home.noWrapSlides">
@@ -23,12 +30,11 @@
 <div class="container-fluid" style="background-color: #fff">
 	<br>
 	 <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 " ng-repeat="item in home.listServiceFather" >
-			 	<img ng-src="{{home.urlImg + item.field_icono.und[0].filename}}" class="img-responsive" style="margin: auto;">
+		 		<a class="link-seccion" ui-sref="servicios({id:item.nid})">
+			 		<img ng-src="{{home.urlImg + item.field_icono.und[0].filename}}" class="img-responsive" style="margin: auto;">
+				</a>
 			 	<h1 class="titulo-seccion font-size-20">{{item.title}}</h1>
 			 	<p class="texto-seccion " ng-bind-html="item.field_contenido.und[0].value"></p>
-			 	<a class="link-seccion" ui-sref="servicios({id:item.nid})">
-			 		<img src="images/boton_neutrón.png">
-			 	</a>
 	 </div>
 
 </div>

@@ -6,12 +6,12 @@ angular
 
   function medicosCtrl($rootScope, dataService,$scope){
       var medicos = this;
-      medicos.contentPage = [];
+      medicos.contentPage;
       medicos.myInterval = 3000;
       medicos.noWrapSlides = false;
       medicos.active = 0;
       medicos.urlSlider =   $rootScope.urlImg +"slider/";
-      medicos.slides =[];
+      medicos.slides;
       init();
       function init(){
           getContentPage(7);

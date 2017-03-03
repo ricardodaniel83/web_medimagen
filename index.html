@@ -20,17 +20,20 @@
 
   </head>
   <body>
+    
     <side-menu></side-menu>
     <div ui-view="main"></div>
     <formulario-contacto></formulario-contacto>
     <!-- Mapa de Google Maps -->
+    <footer-contect></footer-contect>
     <div class="container-fluid" style="padding: 0px">
       <div class="rd-google-map" style="height: 250px">
              <!-- Colocamos mapa de google map -->
             <div id="map" style="height: 100%"></div>
       </div>
     </div>
-    <footer-contect></footer-contect>
+    <footer-runa></footer-runa>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -57,6 +60,7 @@
     <!-- Directivas diseno de layout -->
     <script src="app/layout/menu/sideMenu.directive.js" ></script>
     <script src="app/layout/footer/footer.directive.js" ></script>
+    <script src="app/layout/runasapiens/runa.directive.js" ></script>
     <script src="app/layout/contacto/formContacto.directive.js" ></script>
     <!-- Servicios -->
     <script src="app/layout/servicios/paginas.service.js" ></script>
