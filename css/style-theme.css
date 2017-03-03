@@ -107,7 +107,7 @@ form label {
 }
 
 .menu-principal .padding-top{
-   padding-top: 120px;
+   padding-top: 20px;
 }
 
 .titulo-seccion{
@@ -221,7 +221,7 @@ color: #fff !important;
 
 /******* Titulo de la iMagen  **********/
 .titulo-imagen{
-	 color:#fff;
+	 color:#A88245;
 	 //border-left: 3px solid #fff;
 	 padding-left: 20px;
    top:35%;
