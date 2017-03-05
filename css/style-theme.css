@@ -214,8 +214,7 @@ color: #fff !important;
 }
 
 .fondo-menu{
-    background: url('../images/franja_menu.png') no-repeat;
-    background-size: 100% 100%;
+    background: url('../images/franja_menu_completa.png') no-repeat right bottom;
     font-size: 20px;
 }
 
