@@ -220,9 +220,7 @@ color: #fff !important;
 
 /******* Titulo de la iMagen  **********/
 .titulo-imagen{
-	 color:#fff;
-	 //border-left: 3px solid #fff;
-	 padding-left: 20px;
+	 color:#a88245;
    top:35%;
    left: 30% !important;
 }
@@ -233,6 +231,7 @@ color: #fff !important;
 .titulo-imagen p{
 	font-size: 25px;
 }
+
 
 .panel-servicios{
     //color: #fff
