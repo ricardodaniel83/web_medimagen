@@ -98,9 +98,8 @@ angular
             dataService.getPestanaColeccion(nid).then(function(result){
                 servicios.listFather.pestanas = result;
                 servicios.formulario.servicio =  servicios.listFather.title;
-                setTimeout(function(){
-                  servicios.numberLoaded = true;
-                },1000);
+                servicios.numberLoaded = true;
+
             });
         });
       }

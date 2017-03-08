@@ -6,7 +6,7 @@
 </div>
 
 <!-- Slider de imagenes -->
-	<div style="overflow: hidden; height: 100%">
+	<div class="container-slider">
 			<div uib-carousel active="incidencias.active" interval="incidencias.myInterval" no-wrap="incidencias.noWrapSlides">
 				<div uib-slide ng-repeat="slide in incidencias.slides" index="$index">
 					<img ng-src="{{incidencias.urlSlider + slide.filename}}" style="width:100%">

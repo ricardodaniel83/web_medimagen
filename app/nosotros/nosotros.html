@@ -1,5 +1,5 @@
 <!-- Slider  -->
-<div style="overflow: hidden; height: 100%">
+<div class="container-slider">
 		<div uib-carousel active="nosotros.active" interval="nosotros.myInterval" no-wrap="nosotros.noWrapSlides">
 			<div uib-slide ng-repeat="slide in nosotros.slides" index="$index">
 				<img ng-src="{{nosotros.urlSlider + slide.filename}}" style="width:100%">

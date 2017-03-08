@@ -5,7 +5,7 @@
 		</div>
 </div>
 <!-- Slider -->
-<div style="overflow: hidden; height: 100%">
+<div class="container-slider">
 		<div uib-carousel active="servicios.active" interval="servicios.myInterval" no-wrap="servicios.noWrapSlides">
 			<div uib-slide ng-repeat="slide in servicios.slides" index="$index">
 				<img ng-src="{{servicios.urlSlider + slide.filename}}" style="width:100%">
@@ -87,6 +87,6 @@
 
 <div class="container-fluid" style="background:#01515F; padding:0px">
 	<slick class="slider" settings="servicios.slickConfig " ng-if="servicios.numberLoaded" dots="true">
-				<img ng-src="{{servicios.urlGalery  + slide.filename}}" ng-repeat="slide in servicios.galery">
+				<img ng-src="{{servicios.urlGalery  + slide.filename}}" ng-repeat="slide in servicios.galery" style="min-height:200px">
 	</slick>
 </div>
